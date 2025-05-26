@@ -1,9 +1,75 @@
-# backend/app/main.py
-
-from fastapi import FastAPI
+from fastapi import FastAPI, Query
+from typing import List
+import fastf1
+import pandas as pd
+import os
 
 app = FastAPI()
 
+# Enable cache
+BASE_DIR = os.path.dirname(__file__)
+CACHE_DIR = os.path.abspath(os.path.join(BASE_DIR, '..', 'cache'))
+fastf1.Cache.enable_cache(CACHE_DIR)
+
+
 @app.get("/")
 def home():
-    return {"message": "F1 Pit Stratify API running!"}
+    return {"message": "F1 PitStratify API running!"}
+
+
+@app.get("/api/pitstops")
+def get_pitstops(year: int = Query(...), track: str = Query(...)):
+    try:
+        session = fastf1.get_session(year, track, 'R')
+        session.load()
+
+        laps = session.laps
+        pit_stops = laps[laps['PitInTime'].notna()]
+        pit_stops = pit_stops[['Driver', 'LapNumber', 'PitInTime', 'Compound']]
+
+        # Optional: convert timestamps to strings for JSON compatibility
+        pit_stops['PitInTime'] = pit_stops['PitInTime'].astype(str)
+
+        # Convert to list of dicts
+        data = pit_stops.to_dict(orient="records")
+        return {"track": track, "year": year, "total_pitstops": len(data), "data": data}
+
+    except Exception as e:
+        return {"error": str(e)}
+
+@app.get("/api/track_difficulty")
+def get_track_difficulty(year: int = Query(...), track: str = Query(...)):
+    try:
+        session = fastf1.get_session(year, track, 'R')
+        session.load()
+
+        # --- Metric 1: Avg Pit Stops ---
+        laps = session.laps
+        pit_stops = laps[laps['PitInTime'].notna()]
+        drivers = session.drivers
+        avg_pitstops_per_driver = round(len(pit_stops) / len(drivers), 2)
+
+        # --- Metric 2: Retirements (Drivers with no laps finished) ---
+        completed_laps = laps.groupby('Driver')['LapNumber'].max()
+        num_retirements = sum(completed_laps < laps['LapNumber'].max())
+
+        # --- Metric 3: Safety Car Deployments ---
+        track_status = session.track_status
+        # SC = status 4, VSC = status 5 (from FastF1 docs)
+        sc_count = track_status['Status'].isin([4, 5]).sum()
+
+        # --- Metric 4: Weather Variability (Temperature std deviation) ---
+        weather = session.weather_data
+        weather_variability = round(weather['AirTemp'].std(), 2)
+
+        return {
+            "track": track,
+            "year": year,
+            "avg_pitstops_per_driver": avg_pitstops_per_driver,
+            "num_retirements": int(num_retirements),
+            "safety_car_deployments": int(sc_count),
+            "weather_variability": weather_variability
+        }
+
+    except Exception as e:
+        return {"error": str(e)}
