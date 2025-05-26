@@ -62,13 +62,22 @@ def get_track_difficulty(year: int = Query(...), track: str = Query(...)):
         weather = session.weather_data
         weather_variability = round(weather['AirTemp'].std(), 2)
 
+        difficulty_score = round(
+            avg_pitstops_per_driver * 2.0 +
+            num_retirements * 1.5 +
+            sc_count * 2.0 +
+            weather_variability * 1.0,
+            2
+            )
+
         return {
             "track": track,
             "year": year,
             "avg_pitstops_per_driver": avg_pitstops_per_driver,
             "num_retirements": int(num_retirements),
             "safety_car_deployments": int(sc_count),
-            "weather_variability": weather_variability
+            "weather_variability": weather_variability,
+            "difficulty_score": difficulty_score
         }
 
     except Exception as e:
