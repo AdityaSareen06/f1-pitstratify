@@ -1,0 +1,101 @@
+Year,Track,Driver,Team,StartGrid,AvgTemp,AvgHumidity,NumPitStops
+2023,Bahrain,Max Verstappen,Red Bull Racing,1,27.43,21.5,2
+2023,Bahrain,Sergio Perez,Red Bull Racing,2,27.43,21.5,2
+2023,Bahrain,Fernando Alonso,Aston Martin,5,27.43,21.5,2
+2023,Bahrain,Carlos Sainz,Ferrari,4,27.43,21.5,2
+2023,Bahrain,Lewis Hamilton,Mercedes,7,27.43,21.5,2
+2023,Bahrain,Lance Stroll,Aston Martin,8,27.43,21.5,2
+2023,Bahrain,George Russell,Mercedes,6,27.43,21.5,2
+2023,Bahrain,Valtteri Bottas,Alfa Romeo,12,27.43,21.5,2
+2023,Bahrain,Pierre Gasly,Alpine,20,27.43,21.5,3
+2023,Bahrain,Alexander Albon,Williams,15,27.43,21.5,3
+2023,Bahrain,Yuki Tsunoda,AlphaTauri,14,27.43,21.5,3
+2023,Bahrain,Logan Sargeant,Williams,16,27.43,21.5,3
+2023,Bahrain,Kevin Magnussen,Haas F1 Team,17,27.43,21.5,3
+2023,Bahrain,Nyck De Vries,AlphaTauri,19,27.43,21.5,2
+2023,Bahrain,Nico Hulkenberg,Haas F1 Team,10,27.43,21.5,3
+2023,Bahrain,Guanyu Zhou,Alfa Romeo,13,27.43,21.5,3
+2023,Bahrain,Lando Norris,McLaren,11,27.43,21.5,6
+2023,Bahrain,Esteban Ocon,Alpine,9,27.43,21.5,4
+2023,Bahrain,Charles Leclerc,Ferrari,3,27.43,21.5,2
+2023,Bahrain,Oscar Piastri,McLaren,18,27.43,21.5,1
+2023,Jeddah,Sergio Perez,Red Bull Racing,1,26.09,57.79,1
+2023,Jeddah,Max Verstappen,Red Bull Racing,15,26.09,57.79,1
+2023,Jeddah,Fernando Alonso,Aston Martin,2,26.09,57.79,1
+2023,Jeddah,George Russell,Mercedes,3,26.09,57.79,1
+2023,Jeddah,Lewis Hamilton,Mercedes,7,26.09,57.79,1
+2023,Jeddah,Carlos Sainz,Ferrari,4,26.09,57.79,1
+2023,Jeddah,Charles Leclerc,Ferrari,12,26.09,57.79,1
+2023,Jeddah,Esteban Ocon,Alpine,6,26.09,57.79,1
+2023,Jeddah,Pierre Gasly,Alpine,9,26.09,57.79,1
+2023,Jeddah,Kevin Magnussen,Haas F1 Team,13,26.09,57.79,1
+2023,Jeddah,Yuki Tsunoda,AlphaTauri,16,26.09,57.79,1
+2023,Jeddah,Nico Hulkenberg,Haas F1 Team,10,26.09,57.79,1
+2023,Jeddah,Guanyu Zhou,Alfa Romeo,11,26.09,57.79,2
+2023,Jeddah,Nyck De Vries,AlphaTauri,18,26.09,57.79,1
+2023,Jeddah,Oscar Piastri,McLaren,8,26.09,57.79,1
+2023,Jeddah,Logan Sargeant,Williams,20,26.09,57.79,1
+2023,Jeddah,Lando Norris,McLaren,19,26.09,57.79,2
+2023,Jeddah,Valtteri Bottas,Alfa Romeo,14,26.09,57.79,3
+2023,Jeddah,Alexander Albon,Williams,17,26.09,57.79,2
+2023,Jeddah,Lance Stroll,Aston Martin,5,26.09,57.79,1
+2023,Australia,Max Verstappen,Red Bull Racing,1,17.45,54.16,3
+2023,Australia,Lewis Hamilton,Mercedes,3,17.45,54.16,3
+2023,Australia,Fernando Alonso,Aston Martin,4,17.45,54.16,3
+2023,Australia,Lance Stroll,Aston Martin,6,17.45,54.16,3
+2023,Australia,Sergio Perez,Red Bull Racing,20,17.45,54.16,5
+2023,Australia,Lando Norris,McLaren,13,17.45,54.16,3
+2023,Australia,Nico Hulkenberg,Haas F1 Team,10,17.45,54.16,3
+2023,Australia,Oscar Piastri,McLaren,16,17.45,54.16,4
+2023,Australia,Guanyu Zhou,Alfa Romeo,17,17.45,54.16,5
+2023,Australia,Yuki Tsunoda,AlphaTauri,12,17.45,54.16,4
+2023,Australia,Valtteri Bottas,Alfa Romeo,19,17.45,54.16,6
+2023,Australia,Carlos Sainz,Ferrari,5,17.45,54.16,4
+2023,Australia,Pierre Gasly,Alpine,9,17.45,54.16,2
+2023,Australia,Esteban Ocon,Alpine,11,17.45,54.16,3
+2023,Australia,Nyck De Vries,AlphaTauri,15,17.45,54.16,4
+2023,Australia,Logan Sargeant,Williams,18,17.45,54.16,6
+2023,Australia,Kevin Magnussen,Haas F1 Team,14,17.45,54.16,2
+2023,Australia,George Russell,Mercedes,2,17.45,54.16,2
+2023,Australia,Alexander Albon,Williams,8,17.45,54.16,0
+2023,Australia,Charles Leclerc,Ferrari,7,17.45,54.16,0
+2023,Azerbaijan,Sergio Perez,Red Bull Racing,3,24.86,49.22,1
+2023,Azerbaijan,Max Verstappen,Red Bull Racing,2,24.86,49.22,1
+2023,Azerbaijan,Charles Leclerc,Ferrari,1,24.86,49.22,1
+2023,Azerbaijan,Fernando Alonso,Aston Martin,6,24.86,49.22,1
+2023,Azerbaijan,Carlos Sainz,Ferrari,4,24.86,49.22,1
+2023,Azerbaijan,Lewis Hamilton,Mercedes,5,24.86,49.22,1
+2023,Azerbaijan,Lance Stroll,Aston Martin,9,24.86,49.22,1
+2023,Azerbaijan,George Russell,Mercedes,11,24.86,49.22,2
+2023,Azerbaijan,Lando Norris,McLaren,7,24.86,49.22,1
+2023,Azerbaijan,Yuki Tsunoda,AlphaTauri,8,24.86,49.22,1
+2023,Azerbaijan,Oscar Piastri,McLaren,10,24.86,49.22,1
+2023,Azerbaijan,Alexander Albon,Williams,12,24.86,49.22,1
+2023,Azerbaijan,Kevin Magnussen,Haas F1 Team,16,24.86,49.22,1
+2023,Azerbaijan,Pierre Gasly,Alpine,17,24.86,49.22,2
+2023,Azerbaijan,Esteban Ocon,Alpine,19,24.86,49.22,1
+2023,Azerbaijan,Logan Sargeant,Williams,14,24.86,49.22,1
+2023,Azerbaijan,Nico Hulkenberg,Haas F1 Team,20,24.86,49.22,1
+2023,Azerbaijan,Valtteri Bottas,Alfa Romeo,13,24.86,49.22,3
+2023,Azerbaijan,Guanyu Zhou,Alfa Romeo,15,24.86,49.22,2
+2023,Azerbaijan,Nyck De Vries,AlphaTauri,18,24.86,49.22,0
+2023,Miami,Max Verstappen,Red Bull Racing,9,27.12,59.43,1
+2023,Miami,Sergio Perez,Red Bull Racing,1,27.12,59.43,1
+2023,Miami,Fernando Alonso,Aston Martin,2,27.12,59.43,1
+2023,Miami,George Russell,Mercedes,6,27.12,59.43,1
+2023,Miami,Carlos Sainz,Ferrari,3,27.12,59.43,1
+2023,Miami,Lewis Hamilton,Mercedes,13,27.12,59.43,1
+2023,Miami,Charles Leclerc,Ferrari,7,27.12,59.43,1
+2023,Miami,Pierre Gasly,Alpine,5,27.12,59.43,1
+2023,Miami,Esteban Ocon,Alpine,8,27.12,59.43,1
+2023,Miami,Kevin Magnussen,Haas F1 Team,4,27.12,59.43,1
+2023,Miami,Yuki Tsunoda,AlphaTauri,17,27.12,59.43,1
+2023,Miami,Lance Stroll,Aston Martin,18,27.12,59.43,1
+2023,Miami,Valtteri Bottas,Alfa Romeo,10,27.12,59.43,1
+2023,Miami,Alexander Albon,Williams,11,27.12,59.43,1
+2023,Miami,Nico Hulkenberg,Haas F1 Team,12,27.12,59.43,1
+2023,Miami,Guanyu Zhou,Alfa Romeo,14,27.12,59.43,1
+2023,Miami,Lando Norris,McLaren,16,27.12,59.43,1
+2023,Miami,Nyck De Vries,AlphaTauri,15,27.12,59.43,1
+2023,Miami,Oscar Piastri,McLaren,19,27.12,59.43,1
+2023,Miami,Logan Sargeant,Williams,20,27.12,59.43,1
