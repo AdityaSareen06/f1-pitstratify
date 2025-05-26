@@ -73,3 +73,29 @@ def get_track_difficulty(year: int = Query(...), track: str = Query(...)):
 
     except Exception as e:
         return {"error": str(e)}
+
+from pydantic import BaseModel
+from app.ml import model as pit_model  # import your prediction logic
+
+class PredictionRequest(BaseModel):
+    driver: str
+    team: str
+    track: str
+    start_grid: int
+    temp: float
+    humidity: float
+
+@app.post("/api/predict_pitstops")
+def predict_pitstops(payload: PredictionRequest):
+    try:
+        predicted = pit_model.predict_pitstops(
+            driver=payload.driver,
+            team=payload.team,
+            track=payload.track,
+            start_grid=payload.start_grid,
+            temp=payload.temp,
+            humidity=payload.humidity
+        )
+        return {"predicted_pitstops": predicted}
+    except Exception as e:
+        return {"error": str(e)}
