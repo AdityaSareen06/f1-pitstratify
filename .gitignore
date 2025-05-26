@@ -32,3 +32,6 @@ Thumbs.db
 
 # === Mac/Linux Hidden Files ===
 *.~*
+
+# FastF1 Cache
+backend/cache/
