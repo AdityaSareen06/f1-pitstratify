@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import TrackGrid from './components/TrackGrid';
+import TrackDifficultyChart from './components/TrackDifficultyChart';
+import TestPitstop from './components/TestPitstop';
 
 function App() {
+  const [selectedTrack, setSelectedTrack] = useState(null);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ padding: '20px' }}>
+      <h1>F1 PitStratify</h1>
+
+      {!selectedTrack ? (
+        <>
+          <h2>Select a Track</h2>
+          <TrackGrid onSelect={setSelectedTrack} />
+        </>
+      ) : (
+        <>
+          <TrackDifficultyChart track={selectedTrack} year={2023} />
+          <hr />
+          <TestPitstop defaultTrack={selectedTrack} />
+        </>
+      )}
     </div>
   );
 }
