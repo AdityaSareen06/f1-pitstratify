@@ -66,8 +66,8 @@ def get_track_difficulty(year: int = Query(...), track: str = Query(...)):
 
         # --- Metric 3: Safety Car Deployments ---
         track_status = session.track_status
-        # SC = status 4, VSC = status 5 (from FastF1 docs)
-        sc_count = track_status['Status'].isin([4, 5]).sum()
+        prev_status = track_status['Status'].shift(1, fill_value='0')
+        sc_periods = ((track_status['Status'].isin(['4', '5'])) & (~prev_status.isin(['4', '5']))).sum()
 
         # --- Metric 4: Weather Variability (Temperature std deviation) ---
         weather = session.weather_data
@@ -76,7 +76,7 @@ def get_track_difficulty(year: int = Query(...), track: str = Query(...)):
         difficulty_score = round(
             avg_pitstops_per_driver * 2.0 +
             num_retirements * 1.5 +
-            sc_count * 2.0 +
+            sc_periods * 2.0 +
             weather_variability * 1.0,
             2
             )
@@ -86,7 +86,7 @@ def get_track_difficulty(year: int = Query(...), track: str = Query(...)):
             "year": year,
             "avg_pitstops_per_driver": avg_pitstops_per_driver,
             "num_retirements": int(num_retirements),
-            "safety_car_deployments": int(sc_count),
+            "safety_car_deployments": int(sc_periods),
             "weather_variability": weather_variability,
             "difficulty_score": difficulty_score
         }
