@@ -67,7 +67,7 @@ const App = () => {
                 fontWeight: 'bold'
               }}
             >
-              ⬅ Back to Track Selection
+              Back to Track Selection
             </button>
           </div>
         </>
